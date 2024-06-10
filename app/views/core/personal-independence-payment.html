@@ -11,15 +11,20 @@
       <h1 class="govuk-heading-l">{{title}}</h1>
 
       <p>
-        If you get PIP then we'll ask you security questions about your payments.
+        You can continue proving your idemtity online if you:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>have a UK driving licence (full or provisional) or a UK Passport</li>
+        <li>can answer some security questions</li>
+      </ul>
+
+      <p>
+        We use security questions to stop anyone who might have your details from pretending to be you.
       </p>
 
       <p>
-        If you do not get PIP or would prefer not to say then you'll need to prove your identity another way.
-      </p>
-
-      <p>
-        We will not keep your answer to this question or share it with the service you need to use.
+        It takes 10 minutes to prove your identity this way.
       </p>
 
       {% from "govuk/components/details/macro.njk" import govukDetails %}
@@ -38,7 +43,7 @@
         fieldset: {
           legend: {
             text: "Do you get Personal Independence Payment (PIP)?",
-            isPageHeading: false,
+            isPageHeading: true,
             classes: "govuk-fieldset__legend--m",
             classes: "govuk-visually-hidden"
           }

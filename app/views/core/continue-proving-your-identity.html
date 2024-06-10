@@ -10,16 +10,22 @@
 
       <h1 class="govuk-heading-l">{{title}}</h1>
 
-      <p class="govuk-body">You can continue proving your identity online if you:</p>
+      <p>
+        You can continue proving your idemtity online if you:
+      </p>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>have a UK driving licence (full or provisional) or a UK Passport</li>
         <li>can answer some security questions</li>
       </ul>
 
-      <p class="govuk-body">We use security questions to stop anyone who might have your details from pretending to be you.</p>
+      <p>
+        We use security questions to stop anyone who might have your details from pretending to be you.
+      </p>
 
-      <p class="govuk-body">It takes 10 minutes to prove your identity this way.</p>
+      <p>
+        It takes 10 minutes to prove your identity this way.
+      </p>
 
       <form action="/check-your-details-answer" method="post" novalidate>
 
@@ -30,7 +36,7 @@
         fieldset: {
           legend: {
             text: "How do you want to continue?",
-            isPageHeading: false,
+            isPageHeading: true,
             classes: "govuk-fieldset__legend--m"
           }
         },

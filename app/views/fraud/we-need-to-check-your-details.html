@@ -1,7 +1,9 @@
 {% extends "/layouts/_base.html" %}
 {% set phaseBanner = 'true' %}
 
-{% set title =  "We need to check your details" %}
+{% block pageTitle %}
+  We need to check your details – {{ serviceName }} – GOV.UK One Login
+{% endblock %}
 
 {% block content %}
 
@@ -9,10 +11,10 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        {{title}}
+        We need to check your details
       </h1>
 
-      <p class="govuk-body">Your details will be checked against information held by another organisation.</p>
+      <p class="govuk-body">Your details will be checked against informtion held by another organisation.</p>
 
       <p class="govuk-body">This will help us protoect you against online identity theft.</p>
 
@@ -26,8 +28,6 @@
         To help prove your identity, we ask questions using information from the services you use. To find out how your information will be used to prove your identity   <a class="govuk-link" href="">read our privacy notice (opens in new tab).</a>
       </div>
     </details>
-
-      <p class="govuk-body">It can take up to 30 seconds to check your details. After you continue do not reload or close this page.</p>
 
       {% from "govuk/components/button/macro.njk" import govukButton %}
 

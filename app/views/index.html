@@ -1,50 +1,68 @@
 {% extends "/layouts/_base.html" %}
 {% set phaseBanner = 'true' %}
 
-{% set title =  "DWP KBVaaS Prototype" %}
+{% set pageName="Home" %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">{{title}}</h1>
-
-    <p>Below you will find the core pages and KBV questions from  each information source. This prototype will help the team work towards agreeing final content.</p>
-
     {% from "govuk/components/details/macro.njk" import govukDetails %}
 
-    <details class="govuk-details">
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-        Service Documentation
-      </span>
-    </summary>
-    <div class="govuk-details__text">
-
-      <p class="govuk-body">
-        <a href="https://dwpdigital.atlassian.net/wiki/x/fAGzEx8" class="govuk-link" rel="noreferrer noopener" target="_blank">Confluence - KBVaaS (Knowledge Based Verification as a Service) MSA (opens in new tab)</a>
-      </p>
-
-    </div>
-    </details>
-
     <h2 class="govuk-heading-l">
+      DWP KBVaaS Journeys
+    </h2>
+
+    <p>Below are a variety of different journeys including different questions from each information source. Please select a journey below to test with participants.</p>
+
+    <h2 class="govuk-heading-m">
       Example journeys
     </h2>
 
-    <p>Assumes DWP questions available and answered correctly. Some drop out paths also available here. Not all pages may be included on this journey at present.</p>
+    <p><a class="govuk-link" href="/core/continue-proving-your-identity">Start journey path 1</a></p>
 
-    <h3 class="govuk-heading-m">
-      Happy Path
-    </h3>
+    <p>Assumes DWP questions available and answered correctly. Drop out paths also available on this link.</p>
 
-    <p>One CIS question and two PIP questions answered correctly.</p>
+    <p><strong>CIS Questions included: </strong>child-dob, child-name, partner-dob</p>
 
-    {{ govukButton({
-      text: "Start prototype",
-      href: "/core/continue-proving-your-identity"
-    }) }}
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h2 class="govuk-heading-l">
+      KBVaaS page index
+    </h2>
+
+    <p class="govuk-body">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a class="govuk-link" href="">Continue proving your identity online</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="">We need to check your details</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="">Do you get Personal Independence Payment (PIP)?</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="">Answer security questions</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="">You need to prove your identity another way</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="">Answer security questions (Experian shown but may change to HMRC)</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="">Continue to the service you want to use</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="">Sorry you'll need to prove your identity another way (has photo ID)</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="">Find another way to prove your identity (has photo ID)</a>
+        </li>
+      </ul>
+    </p>
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
@@ -68,65 +86,7 @@
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-    <h2 class="govuk-heading-l">
-      Main page index
-    </h2>
-
-    <p class="govuk-body">
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a class="govuk-link" href="/core/continue-proving-your-identity">Continue proving your identity online</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="/fraud/we-need-to-check-your-details">We need to check your details</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="/core/personal-independence-payment">Do you get Personal Independence Payment (PIP)?</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="/core/page-pre-dwp-kbv-transition">Answer security questions</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="/core/page-different-security-questions">You need to prove your identity another way</a>
-        </li>
-          <li>
-            <a class="govuk-link" href="/core/answer-all-security-questions">You must answer all security questions to prove your identity (both radios will only return to previous page at present)</a>
-          </li>
-          <li>
-          <a class="govuk-link" href="/other-kbvs/answer-security-questions-experian">Answer security questions (Experian shown but may change to HMRC)</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="/core/continue-to-your-service">Continue to the service you want to use</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="/core/photo-id-prove-your-identity-another-way">Sorry you'll need to prove your identity another way (has photo ID but did not answer DWP questions correctly)</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="/core/no-photo-id-prove-your-identity-another-way">Sorry, we cannot confirm your identity this way (no photo ID and did not answer DWP questions correctly)</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="/core/photo-id-another-way-prove-your-identity">Find another way to prove your identity (has photo ID but no DWP questions were available)</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="/core/no-photo-id-another-way-prove-your-identity">Find another way to prove your identity (no photo ID and no DWP questions were available)</a>
-        </li>
-      </ul>
-    </p>
-
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-    <h2 class="govuk-heading-l">
-      System pages
-    </h2>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li>
-        <a class="govuk-link" href="/core/there-is-a-problem-with-your-service">Sorry, there is a problem with your service</a>
-      </li>
-      <li>
-        <a class="govuk-link" href="/core/there-is-a-problem-with-your-service-welsh">Sorry, there is a problem with your service (Welsh)</a>
-      </li>
-    </ul>
+    <p><a class="govuk-link" href="journeys">Older page with previous journeys</a></p>
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
@@ -136,7 +96,7 @@
 
     <ul class="govuk-list govuk-list--bullet">
       <li>
-        Page link here
+        <a class="govuk-link" href="">Page link here</a>
       </li>
     </ul>
 
@@ -154,19 +114,31 @@
       </li>
     </ul>
 
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+  </div>
 
-    <h2 class="govuk-heading-l">
-      Previous iterations
-    </h2>
+  <div class="govuk-grid-column-full">
 
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+  <h2 class="govuk-heading-l">
+    Iterations – previous UR
+  </h2>
+
+  <p class="govuk-body">
     <ul class="govuk-list govuk-list--bullet">
       <li>
-        <p class="govuk-body">
-          Content here
-        </p>
+        <a class="govuk-link" href="">Round 1</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="">Round 2</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="">Round 3</a>
       </li>
     </ul>
+  </p>
+
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
   </div>
 </div>

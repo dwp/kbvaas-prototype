@@ -68,12 +68,13 @@ router.post('/pip-answer', function(request, response) {
     }
 })
 
+
 router.post('/check-your-details-answer', function(request, response) {
 
     var id = request.session.data['identity-type']
     if (id == "another-way"){
         response.redirect("/fraud/we-need-to-check-your-details")
     } else {
-        response.redirect("/end-of-prototype")
+        response.redirect("gov")
     }
 })

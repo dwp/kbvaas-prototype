@@ -14,11 +14,13 @@
     </p>
 {% endset %}
 
+
+
 {% block content %}
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
 
-            <form class="form" action="/pip-questions/account-number" method="post" autocomplete="off" novalidate>
+            <form class="form" action={{ formPostLink }} method="post" autocomplete="off" novalidate>
 
                 <!--page heading with caption include-->
                 {% set pageHeadingH1 %}
@@ -60,13 +62,20 @@
                     ]
                 }) }}
 
-                {{ govukButton({
-                    text: "Continue"
+
+                {{ govukDetails({
+                summaryText: "I do not have this information now",
+                html: detailsTextHtml | safe
                 }) }}
 
-            </form>
 
-            <p class="govuk-body"><a class="govuk-link" href="/core/answer-all-security-questions">I cannot answer this question</a></p>
+                {{ govukButton({
+                    text: "Continue",
+                    href: "child-name"
+                }) }}
+
+
+            </form>
 
         </div>
     </div>
