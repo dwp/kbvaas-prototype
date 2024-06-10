@@ -1,0 +1,93 @@
+{% extends "/layouts/_base.html" %}
+{% set phaseBanner = 'true' %}
+
+{% set title =  "Sorry, you'll need to prove your identity another way" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">{{title}}</h1>
+
+      <p>
+        This is because you did not answer some of the security questions correctly.
+      </p>
+
+      <h2 class="govuk-heading-m">
+        What you can do
+      </h2>
+
+      <p>
+        Based on what you've told us, you have a photo ID you can use to prove your identity.
+      </p>
+
+      <p>
+        You can do this online with the GOV.UK Check app if you have:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>an iPhone 7 or higher</li>
+        <li>an Android phone (for example, Samsung or Google Pixel)</li>
+      </ul>
+
+      <p>
+        We use security questions to stop anyone who might have your details from pretending to be you.
+      </p>
+
+      <p>
+        It takes 10 minutes to prove your identity this way.
+      </p>
+
+      {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+    {{ govukDetails({
+      summaryText: "What is PIP?",
+      text: "PIP is a benefit paid to some people who have a long term health condition or disability."
+    }) }}
+
+      <form action="/core/page-pre-dwp-kbv-transition" method="post" novalidate>
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+        name: "pip",
+        fieldset: {
+          legend: {
+            text: "Do you get Personal Independence Payment (PIP)?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--m",
+            classes: "govuk-visually-hidden"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Prove your identity with the GOV.UK ID Check app"
+          },
+          {
+            value: "no",
+            text: "no"
+          },
+          {
+            divider: "or"
+          },
+          {
+            value: "prefer-not-to-say",
+            text: "prefer not to say"
+          }
+              ]
+            }) }}
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

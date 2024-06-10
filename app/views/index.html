@@ -1,0 +1,146 @@
+{% extends "/layouts/_base.html" %}
+{% set phaseBanner = 'true' %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+    <h2 class="govuk-heading-l">
+      DWP KBVaaS Journeys
+    </h2>
+
+    <p>Below are a variety of different journeys including different questions from each information source. Please select a journey below to test with participants.</p>
+
+    <h2 class="govuk-heading-m">
+      Example journeys
+    </h2>
+
+    <p><a class="govuk-link" href="/core/continue-proving-your-identity">Start journey path 1</a></p>
+
+    <p>Assumes DWP questions available and answered correctly. Drop out paths also available on this link.</p>
+
+    <p><strong>CIS Questions included: </strong>child-dob, child-name, partner-dob</p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h2 class="govuk-heading-l">
+      KBVaaS page index
+    </h2>
+
+    <p class="govuk-body">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a class="govuk-link" href="">Continue proving your identity online</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="">We need to check your details</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="">Do you get Personal Independence Payment (PIP)?</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="">Answer security questions</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="">You need to prove your identity another way</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="">Answer security questions (Experian shown but may change to HMRC)</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="">Continue to the service you want to use</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="">Sorry you'll need to prove your identity another way (has photo ID)</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="">Find another way to prove your identity (has photo ID)</a>
+        </li>
+      </ul>
+    </p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h2 class="govuk-heading-l">
+      Question pages index
+    </h2>
+
+    <p class="govuk-body">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a class="govuk-link" href="/cis-questions/index.html">CIS Questions</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="/esa-questions/index.html">ESA Questions</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="/pip-questions/index.html">PIP Questions</a>
+        </li>
+      </ul>
+    </p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <p><a class="govuk-link" href="journeys">Older page with previous journeys</a></p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h2 class="govuk-heading-l">
+      Dev ready pages
+    </h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a class="govuk-link" href="">Page link here</a>
+      </li>
+    </ul>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h2 class="govuk-heading-l">
+      Experiments
+    </h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <p class="govuk-body">
+          Content here
+        </p>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="govuk-grid-column-full">
+
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+  <h2 class="govuk-heading-l">
+    Iterations – previous UR
+  </h2>
+
+  <p class="govuk-body">
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a class="govuk-link" href="">Round 1</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="">Round 2</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="">Round 3</a>
+      </li>
+    </ul>
+  </p>
+
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+  </div>
+</div>
+
+{% endblock %}

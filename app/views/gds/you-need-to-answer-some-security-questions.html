@@ -1,0 +1,68 @@
+{% extends "/layouts/_base.html" %}
+{% set phaseBanner = 'true' %}
+
+{% block pageTitle %}
+  You need to answer some security questions – {{ serviceName }} – GOV.UK One Login
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        You need to answer some security questions
+      </h1>
+
+      <p>
+        TWe use these security questions to stop anyone who might have your details pretending to be you.
+      </p>
+
+      <p>
+        We will not keep your answers or share them with the service you want to use.
+      </p>
+
+      <h2 class="govuk-heading-m">
+        Before you start
+      </h2>
+
+      <p>
+        You may find it easier to answer the questions if you have some documents with you.
+      </p>
+
+      <p class="govuk-body">We may ask you about your:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>payslips</li>
+        <li>P60</li>
+        <li>benefit letters</li>
+        <li>bank or building society account</li>
+      </ul>
+
+      {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+      {{ govukWarningText({
+        text: "Answer the questions as accurately as possible. You cannot change your answers later.",
+        iconFallbackText: "Warning"
+      }) }}
+
+      <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          How we know what questions to ask you
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        To help prove your identity, we ask questions using information from the services you use. To find out how your information will be used to prove your identity   <a class="govuk-link" href="">read our privacy notice (opens in new tab).</a>
+      </div>
+    </details>
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}

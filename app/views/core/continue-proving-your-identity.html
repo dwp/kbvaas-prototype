@@ -1,0 +1,73 @@
+{% extends "/layouts/_base.html" %}
+{% set phaseBanner = 'true' %}
+
+{% set title =  "Continue proving your identity" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">{{title}}</h1>
+
+      <p>
+        You can continue proving your idemtity online if you:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>have a UK driving licence (full or provisional) or a UK Passport</li>
+        <li>can answer some security questions</li>
+      </ul>
+
+      <p>
+        We use security questions to stop anyone who might have your details from pretending to be you.
+      </p>
+
+      <p>
+        It takes 10 minutes to prove your identity this way.
+      </p>
+
+      <form action="/check-your-details-answer" method="post" novalidate>
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+        name: "identity-type",
+        fieldset: {
+          legend: {
+            text: "How do you want to continue?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "uk-driving-licence",
+            text: "Enter your UK driving licence details and answer security questions online"
+          },
+          {
+            value: "uk-passport",
+            text: "Enter your UK passport details and answer security questions online"
+          },
+          {
+            divider: "or"
+          },
+          {
+            value: "another-way",
+            text: "Prove your identity another way"
+          }
+              ]
+            }) }}
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "/layouts/_base.html" %}
+{% set phaseBanner = 'true' %}
+
+{% set title =  "Do you get Personal Independence Payment (PIP)?" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">{{title}}</h1>
+
+      <p>
+        You can continue proving your idemtity online if you:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>have a UK driving licence (full or provisional) or a UK Passport</li>
+        <li>can answer some security questions</li>
+      </ul>
+
+      <p>
+        We use security questions to stop anyone who might have your details from pretending to be you.
+      </p>
+
+      <p>
+        It takes 10 minutes to prove your identity this way.
+      </p>
+
+      {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+    {{ govukDetails({
+      summaryText: "What is PIP?",
+      text: "PIP is a benefit paid to some people who have a long term health condition or disability."
+    }) }}
+
+      <form action="/pip-answer" method="post" novalidate>
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+        name: "pip",
+        fieldset: {
+          legend: {
+            text: "Do you get Personal Independence Payment (PIP)?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--m",
+            classes: "govuk-visually-hidden"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: "yes"
+          },
+          {
+            value: "no",
+            text: "no"
+          },
+          {
+            divider: "or"
+          },
+          {
+            value: "prefer-not-to-say",
+            text: "prefer not to say"
+          }
+              ]
+            }) }}
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

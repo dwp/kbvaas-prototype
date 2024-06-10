@@ -1,0 +1,32 @@
+{% extends "layouts/_base.html" %}
+{% set phaseBanner = 'true' %}
+{% set languageToggle = 'false' %}
+
+
+{% set title =  "You need to prove your identity another way" %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">{{title}}</h1>
+
+        <p class="govuk-body">
+            We do not have enough information to ask you security questions about your PIP.
+        </p>
+
+        <p class="govuk-body">
+            We'll check if we can ask different security questions based on other details you've given.
+        </p>
+
+        {{ govukButton({
+            text: "Continue",
+            href: "/other-kbvs/answer-security-questions-experian"
+        }) }}
+
+        <p class="govuk-body">
+          <a class="govuk-link" href="">Contact the GOV.UK One Login team (opens in new tab)</a>
+        </p>
+
+    </div>
+</div>
+{% endblock %}
