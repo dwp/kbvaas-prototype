@@ -1,7 +1,7 @@
 {% extends "/layouts/_base.html" %}
 {% set phaseBanner = 'true' %}
 
-{% set pageName="Home" %}
+{% set title =  "DWP KBVaaS Prototype" %}
 
 {% block content %}
 
@@ -10,9 +10,7 @@
 
     {% from "govuk/components/details/macro.njk" import govukDetails %}
 
-    <h2 class="govuk-heading-l">
-      DWP KBVaaS Journeys - test please delete
-    </h2>
+    <h1 class="govuk-heading-l">{{title}}</h1>
 
     <p>Below are a variety of different journeys including different questions from each information source. Please select a journey below to test with participants.</p>
 
@@ -24,39 +22,45 @@
 
     <p>Assumes DWP questions available and answered correctly. Drop out paths also available on this link.</p>
 
-    <p><strong>CIS Questions included: </strong>child-dob, child-name, partner-dob</p>
+    <p><strong>CIS Questions included: </strong>child-dob, child-name, partner-dob, partner-nino</p>
+
+    <p><a class="govuk-link" href="">Start journey path 2</a></p>
+
+    <p>Assumes DWP questions available and answered correctly. Drop out paths also available on this link.</p>
+
+    <p><strong>PIP Questions included: </strong>questions here</p>
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
     <h2 class="govuk-heading-l">
-      KBVaaS page index
+      Main page index
     </h2>
 
     <p class="govuk-body">
       <ul class="govuk-list govuk-list--bullet">
         <li>
-          <a class="govuk-link" href="">Continue proving your identity online</a>
+          <a class="govuk-link" href="/core/continue-proving-your-identity">Continue proving your identity online</a>
         </li>
         <li>
-          <a class="govuk-link" href="">We need to check your details</a>
+          <a class="govuk-link" href="/fraud/we-need-to-check-your-details">We need to check your details</a>
         </li>
         <li>
-          <a class="govuk-link" href="">Do you get Personal Independence Payment (PIP)?</a>
+          <a class="govuk-link" href="/core/personal-independence-payment">Do you get Personal Independence Payment (PIP)?</a>
         </li>
         <li>
-          <a class="govuk-link" href="">Answer security questions</a>
+          <a class="govuk-link" href="/core/page-pre-dwp-kbv-transition">Answer security questions</a>
         </li>
         <li>
-          <a class="govuk-link" href="">You need to prove your identity another way</a>
+          <a class="govuk-link" href="/core/page-different-security-questions">You need to prove your identity another way</a>
         </li>
         <li>
-          <a class="govuk-link" href="">Answer security questions (Experian shown but may change to HMRC)</a>
+          <a class="govuk-link" href="/other-kbvs/answer-security-questions-experian">Answer security questions (Experian shown but may change to HMRC)</a>
         </li>
         <li>
-          <a class="govuk-link" href="">Continue to the service you want to use</a>
+          <a class="govuk-link" href="/core/continue-to-your-service">Continue to the service you want to use</a>
         </li>
         <li>
-          <a class="govuk-link" href="">Sorry you'll need to prove your identity another way (has photo ID)</a>
+          <a class="govuk-link" href="/core/photo-id-prove-your-identity-another-way">Sorry you'll need to prove your identity another way (has photo ID)</a>
         </li>
         <li>
           <a class="govuk-link" href="">Find another way to prove your identity (has photo ID)</a>

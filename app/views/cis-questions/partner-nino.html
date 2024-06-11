@@ -54,12 +54,9 @@
 
                 {{ govukButton({
                     text: "Continue",
-                    disabled: formPostLink === null
+                    href: "/core/continue-to-your-service"
                 }) }}
 
-                {% if formPostLink %}
-                    <p><a href={{ formPostLink }}>I cannot answer this question</a></p>
-                {% endif %}
             </form>
 
         </div>
