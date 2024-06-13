@@ -1,7 +1,7 @@
 {% extends "/layouts/_base.html" %}
 {% set phaseBanner = 'true' %}
 
-{% set title =  "Sorry, you'll need to prove your identity another way" %}
+{% set title =  "Find another way to prove your identity" %}
 
 {% block content %}
 
@@ -15,31 +15,39 @@
       </p>
 
       <h2 class="govuk-heading-m">
-        What you can do
+        If you do not have photo ID
       </h2>
 
       <p>
-        Based on what you've told us, you have a photo ID you can use to prove your identity.
+        You can try proving your identity with the service you need to use. They may take other types of ID.
       </p>
 
-      <p>
-        You can do this online with the GOV.UK Check app if you have:
-      </p>
+      <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Types of photos ID you can use
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">You can use a:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>UK photocard driving licence</li>
+          <li>European Union (EU) photocard driving licence</li>
+          <li>UK passport</li>
+          <li>non-UK passport</li>
+          <li>National identity card from a European Economic Area (EEA) country</li>
+          <li>UK biometric residence permit (BRP)</li>
+          <li>UK biometric residence card (BRC)</li>
+          <li>UK Frontier Worker permit</li>
+        </ul>
+      </div>
+      </details>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>an iPhone 7 or higher</li>
-        <li>an Android phone (for example, Samsung or Google Pixel)</li>
-      </ul>
+      <h2 class="govuk-heading-m">
+        What would you like to do?
+      </h2>
 
-      <p>
-        You can also prove your identity at a Post Office. This option takes longer. You'll usually get an outcome within a day of going to the Post Office.
-      </p>
-
-    <h2 class="govuk-heading-m">
-      What would you like to do?
-    </h2>
-
-      <form action="/core/page-pre-dwp-kbv-transition" method="post" novalidate>
+      <form action="" method="post" novalidate>
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
@@ -55,10 +63,14 @@
         },
         items: [
           {
+            value: "go-to-service",
+            text: "Got to the service you need to use and find out if they take other types of ID"
+          },
+          {
             value: "check-app",
             text: "Prove your identity with the GOV.UK Check app",
             hint: {
-            text: "You'll be shown how to download and use the app."
+            text: "You’ll be shown how to download and use the app."
           }
           },
           {
