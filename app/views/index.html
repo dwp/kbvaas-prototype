@@ -8,11 +8,11 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    {% from "govuk/components/details/macro.njk" import govukDetails %}
-
     <h1 class="govuk-heading-l">{{title}}</h1>
 
     <p>Below you will find the core pages and KBV questions from  each information source. This prototype will help the team work towards agreeing final content.</p>
+
+    {% from "govuk/components/details/macro.njk" import govukDetails %}
 
     <details class="govuk-details">
     <summary class="govuk-details__summary">
@@ -21,7 +21,11 @@
       </span>
     </summary>
     <div class="govuk-details__text">
-      <a class="govuk-link" href="https://dwpdigital.atlassian.net/wiki/x/fAGzEx8">Confluence - KBVaaS (Knowledge Based Verification as a Service) MSA</a>
+
+      <p class="govuk-body">
+        <a href="https://dwpdigital.atlassian.net/wiki/x/fAGzEx8" class="govuk-link" rel="noreferrer noopener" target="_blank">Confluence - KBVaaS (Knowledge Based Verification as a Service) MSA (opens in new tab)</a>
+      </p>
+
     </div>
     </details>
 
