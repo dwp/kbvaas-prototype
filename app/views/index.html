@@ -14,15 +14,29 @@
 
     <p>Below you will find the core pages and KBV questions from  each information source. This prototype will help the team work towards agreeing final content.</p>
 
-    <h2 class="govuk-heading-m">
-      Example journeys
-    </h2>
+    <details class="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Service Documentation
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      <a class="govuk-link" href="https://dwpdigital.atlassian.net/wiki/x/fAGzEx8">Confluence - KBVaaS (Knowledge Based Verification as a Service) MSA</a>
+    </div>
+    </details>
 
-    <p><a class="govuk-link" href="/core/continue-proving-your-identity">Sample journey path</a></p>
+    <h2 class="govuk-heading-m">
+      Example journey
+    </h2>
 
     <p>Assumes DWP questions available and answered correctly. Some drop out paths also available here. Not all pages may be included on this journey at present.</p>
 
-    <p><strong>CIS Questions included: </strong>child-dob, child-name, partner-dob, partner-nino</p>
+    <p><strong>CIS questions included: </strong>child-dob, child-name, partner-dob, partner-nino</p>
+
+    {{ govukButton({
+      text: "Start prototype",
+      href: "/core/continue-proving-your-identity"
+    }) }}
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
@@ -96,7 +110,7 @@
 
     <ul class="govuk-list govuk-list--bullet">
       <li>
-        <a class="govuk-link" href="">Page link here</a>
+        Page link here
       </li>
     </ul>
 
@@ -127,13 +141,13 @@
   <p class="govuk-body">
     <ul class="govuk-list govuk-list--bullet">
       <li>
-        <a class="govuk-link" href="">Round 1</a>
+        Round 1
       </li>
       <li>
-        <a class="govuk-link" href="">Round 2</a>
+        Round 2
       </li>
       <li>
-        <a class="govuk-link" href="">Round 3</a>
+        Round 3
       </li>
     </ul>
   </p>
