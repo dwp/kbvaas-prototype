@@ -20,7 +20,7 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
 
-            <form class="form" action={{ formPostLink }} method="post" autocomplete="off" novalidate>
+            <form class="form" action="/core/continue-to-your-service" method="post" autocomplete="off" novalidate>
 
                 <!--page heading with caption include-->
                 {% set pageHeadingH1 %}
@@ -63,14 +63,12 @@
                 }) }}
 
                 {{ govukButton({
-                    text: "Continue",
-                    disabled: formPostLink === null
+                    text: "Continue"
                 }) }}
 
-                {% if formPostLink %}
-                    <p><a href={{ formPostLink }}>I cannot answer this question</a></p>
-                {% endif %}
             </form>
+
+            <p class="govuk-body"><a class="govuk-link" href="">I cannot answer this question</a></p>
 
         </div>
     </div>

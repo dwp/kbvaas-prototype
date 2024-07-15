@@ -75,6 +75,6 @@ router.post('/check-your-details-answer', function(request, response) {
     if (id == "another-way"){
         response.redirect("/fraud/we-need-to-check-your-details")
     } else {
-        response.redirect("gov")
+        response.redirect("/end-of-prototype")
     }
 })

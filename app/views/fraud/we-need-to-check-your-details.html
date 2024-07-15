@@ -1,9 +1,7 @@
 {% extends "/layouts/_base.html" %}
 {% set phaseBanner = 'true' %}
 
-{% block pageTitle %}
-  We need to check your details – {{ serviceName }} – GOV.UK One Login
-{% endblock %}
+{% set title =  "We need to check your details" %}
 
 {% block content %}
 
@@ -11,7 +9,7 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        We need to check your details
+        {{title}}
       </h1>
 
       <p class="govuk-body">Your details will be checked against information held by another organisation.</p>
