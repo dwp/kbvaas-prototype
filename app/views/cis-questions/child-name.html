@@ -20,7 +20,7 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
 
-            <form action={{ formPostLink }} method="post" autocomplete="off">
+            <form class="form" action="" method="post" autocomplete="off">
 
                 <!--page heading with caption include-->
                 {% set pageHeadingH1 %}
@@ -42,11 +42,12 @@
                 }) }}
 
                 {{ govukButton({
-                    text: "Continue",
-                    href: "partner-dob"
+                    text: "Continue"
                 }) }}
 
             </form>
+
+            <p class="govuk-body"><a class="govuk-link" href="">I cannot answer this question</a></p>
 
         </div>
     </div>

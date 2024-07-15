@@ -20,7 +20,7 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
 
-            <form class="form" action={{ formPostLink }} method="post" autocomplete="off" novalidate>
+            <form class="form" action="/pip-questions/account-number" method="post" autocomplete="off" novalidate>
 
                 <!--page heading with caption include-->
                 {% set pageHeadingH1 %}
@@ -63,12 +63,12 @@
                 }) }}
 
                 {{ govukButton({
-                    text: "Continue",
-                    href: "child-name"
+                    text: "Continue"
                 }) }}
 
-
             </form>
+
+            <p class="govuk-body"><a class="govuk-link" href="">I cannot answer this question</a></p>
 
         </div>
     </div>
