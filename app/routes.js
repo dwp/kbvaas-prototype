@@ -68,7 +68,6 @@ router.post('/pip-answer', function(request, response) {
     }
 })
 
-
 router.post('/check-your-details-answer', function(request, response) {
 
     var id = request.session.data['identity-type']
